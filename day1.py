@@ -1,7 +1,7 @@
 from netmiko import ConnectHandler
 
-# Podaci za povezivanje na ruter
-ruter = {
+# This acts as an "address book" for the device we want to connect to.
+router = {
     'device_type': 'cisco_ios',
     'host':   '192.168.237.100', 
     'username': 'admin',
@@ -9,19 +9,19 @@ ruter = {
     'port': 22,
 }
 
-print("Povezujem se na ruter...")
+print(f"Connecting to {router['host']}...")
 
-# Povezivanje
-konekcija = ConnectHandler(**ruter)
-print("Uspesno povezan! Saljem komandu...")
+# Connecting
+net_connect = ConnectHandler(**router)
+print("Success! Connection established.")
 
-# Slanje komande
-rezultat = konekcija.send_command('show ip interface brief')
+# Send a command to the device
+rezultat = net_connect.send_command('show ip interface brief')
 
-# Ispis rezultata
+# Print the output nicely formatted
 print("-" * 30)
 print(rezultat)
 print("-" * 30)
 
-# Raskidanje veze
-konekcija.disconnect()
+# Disconnect from the device
+net_connect.disconnect()
