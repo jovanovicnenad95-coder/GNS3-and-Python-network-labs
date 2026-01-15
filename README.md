@@ -14,6 +14,15 @@ This repository documents my journey becoming a Hybrid Network Engineer. It comb
 * **Goal:** Connect to the router, run `show version`, and use Python string manipulation to extract only the software version and uptime.
 * **Key Concept:** `splitlines()` method and `for` loops.
 
+### Day 3: Advanced STP (MSTP Load Balancing)
+* **Goal:** Configure Multiple Spanning Tree Protocol (MSTP) to utilize redundant links efficiently.
+* **Topology:** 3-Switch Triangle Loop.
+* **Mechanism:**
+  * Created two MST Instances:
+    * **MST1:** VLAN 10 (Root: SW1) -> Traffic flows via Left Link.
+    * **MST2:** VLAN 20 (Root: SW2) -> Traffic flows via Right Link.
+* **Result:** Achieved L2 Load Balancing. Both uplinks are active forwarding traffic for different VLANs, preventing blocked ports from wasting bandwidth.
+
 ## 🚀 How to Run
 
 1. **Install Dependencies:**
