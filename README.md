@@ -1,45 +1,19 @@
-# GNS3 & Python Network Automation Labs
+# Network Engineering & Automation Journey
 
-This repository documents my journey becoming a Hybrid Network Engineer. It combines core networking protocols (GNS3 labs) with modern automation tools (Python, Netmiko).
+Welcome to my lab repository! 🚀
+Here I document my path to becoming a Senior Hybrid Network Engineer, combining **Cisco Networking (CCNP level)** with **Python Automation** and **DevOps** practices.
 
-## 📂 Repository Structure
+## 📂 Lab Progress Index
 
-### Day 1: Basic SSH Connectivity
-* **Script:** `day1.py`
-* **Goal:** Connect to a Cisco IOS device via SSH using Python (Netmiko) and retrieve interface status.
-* **Lab Setup:** GNS3 (Cisco Router + VMware Network Adapter).
+| Day | Topic | Key Skills | Status |
+| :--- | :--- | :--- | :--- |
+| **Day 1** | [Basic SSH Connectivity](./Day1_Basic_SSH) | Python, Netmiko, SSH | ✅ Done |
+| **Day 2** | [Parsing Output](./Day2_Parsing) | Python String Manipulation, Splitlines | ✅ Done |
+| **Day 3** | [Advanced STP (MSTP)](./Day3_MSTP) | Layer 2, Load Balancing, MST Regions | ✅ Done |
+| **Day 4** | [L2 Security](./Day4_L2_Security) | DHCP Snooping, DAI, IP Source Guard | ✅ Done |
+|
 
-### Day 2: Parsing Output (String Operations)
-* **Script:** `day2.py`
-* **Goal:** Connect to the router, run `show version`, and use Python string manipulation to extract only the software version and uptime.
-* **Key Concept:** `splitlines()` method and `for` loops.
-
-### Day 3: Advanced STP (MSTP Load Balancing)
-* **Goal:** Configure Multiple Spanning Tree Protocol (MSTP) to utilize redundant links efficiently.
-* **Topology:** 3-Switch Triangle Loop.
-* **Mechanism:**
-  * Created two MST Instances:
-    * **MST1:** VLAN 10 (Root: SW1) -> Traffic flows via Left Link.
-    * **MST2:** VLAN 20 (Root: SW2) -> Traffic flows via Right Link.
-* **Result:** Achieved L2 Load Balancing. Both uplinks are active forwarding traffic for different VLANs, preventing blocked ports from wasting bandwidth.
-
-## 🚀 How to Run
-
-1. **Install Dependencies:**
-
-   pip install netmiko
-
-2. Run the script:
-
-python day1.py
-python day2.py
-
-🛠️ Tech Stack
-
-- Python 3
-
-- Netmiko Library
-
-- GNS3 Network Simulator
-
-- Cisco IOS
+## 🛠️ Tech Stack
+* **Core Networking:** Cisco IOS, OSPF, BGP, STP, Security
+* **Automation:** Python 3, Netmiko, Jinja2 (Soon)
+* **Tools:** GNS3, Wireshark, Git/GitHub, VS Code
