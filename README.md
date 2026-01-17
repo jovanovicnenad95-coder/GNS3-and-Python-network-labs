@@ -12,6 +12,7 @@ Here I document my path to becoming a Senior Hybrid Network Engineer, combining 
 | **Day 3** | [Advanced STP (MSTP)](./Day3_MSTP) | Layer 2, Load Balancing, MST Regions | ✅ Done |
 | **Day 4** | [L2 Security](./Day4_L2_Security) | DHCP Snooping, DAI, IP Source Guard | ✅ Done |
 | **Day 5** | [Multi-Device Loop](./Day5_Multi_Device) | Python Lists, For Loops, Scalability | ✅ Done |
+| **Day 6** | [Config Backup](./Day6_Config_Backup) | Python File I/O, Timestamping | ✅ Done |
 
 ## 🛠️ Tech Stack
 * **Core Networking:** Cisco IOS, OSPF, BGP, STP, Security
